@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QAI Monitor - Sara</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<h1>🌿 QAI Monitor </h1>
+
+<div class="dashboard">
+
+  <div class="card">
+    <h2>CO₂ (ppm)</h2>
+    <canvas id="gaugeCO2" width="200" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Température (°C)</h2>
+    <canvas id="gaugeTemp" width="200" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Humidité (%)</h2>
+    <canvas id="gaugeHum" width="200" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>TVOC (ppb)</h2>
+    <canvas id="gaugeTVOC" width="200" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>CO (ppm)</h2>
+    <canvas id="gaugeCO" width="200" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Ventilateur</h2>
+    <div class="fan-control">
+        <label>
+            <input type="radio" name="fan" value="off" checked>
+            <span class="led off"></span> Éteint
+        </label>
+        <label>
+            <input type="radio" name="fan" value="on">
+            <span class="led on"></span> Allumé
+        </label>
+    </div>
+  </div>
+
+</div>
+
+<!-- Gauge.js -->
+<script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
